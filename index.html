@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Varun Electronics</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-dXf6ZjTcQ1MQYkxI6I9mRl0BsYrdQd/9WvnuJ6bGjJq0Is7F4JxKc6qgJHuwG6xwhb9klpJblpV7neP9c7Q2Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      color: #343a40;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      background: linear-gradient(90deg, #1f4037, #99f2c8);
+      padding: 15px 25px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .navbar-brand {
+      font-weight: bold;
+      color: #fff;
+      font-size: 28px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .nav-link {
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      color: #ffdd57;
+    }
+    
+    .dropdown-menu {
+      background-color: #1f4037;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .dropdown-item {
+      color: #fff;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .dropdown-item:hover {
+      background-color: #99f2c8;
+      color: #000;
+    }
+    
+    .form-control {
+      border-radius: 20px;
+      border: 2px solid #99f2c8;
+      transition: border-color 0.3s ease;
+    }
+    
+    .form-control:focus {
+      border-color: #ffdd57;
+      box-shadow: 0 0 5px rgba(255, 221, 87, 0.5);
+    }    
+
+    .container8 {
+      /*padding: 15px;*/
+      background-image: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      /*border-radius: 8px;*/
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .social-icons i {
+      margin-right: 20px;
+      font-size: 28px;
+      transition: color 0.3s ease;
+    }
+    
+    .social-icons i:hover {
+      color: #ffd700; /* Gold hover effect */
+    }
+    
+    .phone-number p {
+      margin: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+    
+    .phone-number i {
+      margin-right: 10px;
+      color: #ffd700; /* Gold color for the phone icon */
+    }
+    
+    @media (max-width: 576px) {
+      .container8 {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .social-icons {
+        margin-bottom: 10px;
+      }
+    }
+    
+
+    .hero-section {
+      background: url('men.jpg') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero-section h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      background-color: #d420ce;
+      color: #333;
+      padding: 10px;
+    }
+
+    .hero-section p {
+        background-color: #52cb83;
+        color: #1928cf;
+      font-size: 1.5em;
+      padding: 5px;
+    }
+
+    .hero-section .btn {
+      width: 20vw;
+      padding: 15px;
+      font-size: 1.2em;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      margin-top: 20px;
+    }
+
+    .hero-section .btn:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 40px 0;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #ffc107;
+    }
+
+    footer a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer h5 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    footer .row div {
+      margin-bottom: 20px;
+    }
+
+    footer .social-icons {
+      margin-top: 20px;
+    }
+
+    footer .social-icons a {
+      font-size: 24px;
+      color: white;
+      margin-right: 15px;
+    }
+
+    footer .social-icons a:hover {
+      color: #ffc107;
+    }
+
+    footer .text-center p {
+      margin-top: 10px;
+    }
+
+    .wrapper{
+        position: relative;
+        top: 5%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+      }
+      
+      .link_wrapper{
+        position: relative;
+      }
+      
+      .hoverm{
+        display: block;
+        width: 250px;
+        height: 50px;
+        line-height: 50px;
+        font-weight: bold;
+        text-decoration: none;
+        background: #333;
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 3px solid #333;
+        transition: all .35s;
+      }
+      
+      .icon{
+        width: 50px;
+        height: 50px;
+        border: 3px solid transparent;
+        position: absolute;
+        transform: rotate(45deg);
+        right: 0;
+        top: 0;
+        z-index: -1;
+        transition: all .35s;
+      }
+      
+      .icon svg{
+        width: 30px;
+        position: absolute;
+        top: calc(50% - 15px);
+        left: calc(50% - 15px);
+        transform: rotate(-45deg);
+        fill: #2ecc71;
+        transition: all .35s;
+      }
+      
+      .hoverm:hover{
+        width: 200px;
+        border: 3px solid #2ecc71;
+        background: transparent;
+        color: #2ecc71;
+      }
+      
+      .hoverm:hover + .icon{
+        border: 3px solid #2ecc71;
+        right: -25%;
+      }
+
+      .text-white{
+        cursor: pointer;
+      }
+
+
+      .card{
+        margin: 2em;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+  
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      margin: 2em;
+      width: 18rem; /* Ensure consistent card width */
+      padding: 1em;
+  }
+  
+  .card-img-top {
+      width: 100%;
+      height: auto;
+      display: block;
+  }
+  
+  .card-body {
+      padding: 15px;
+  }
+  
+  .card-title {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      color: #333;
+  }
+  
+  .card-text {
+      font-size: 1em;
+      color: #666;
+      margin-bottom: 15px;
+  }
+  
+  .btn-primary {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+      background-color: #0056b3;
+  }
+  
+  .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  
+
+  </style>
+</head>
+
+<body>
+  <!-- Top Bar -->
+  <div class="container8">
+    <div class="social-icons">
+      <i class="bi bi-instagram"></i>
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-linkedin"></i>
+      <i class="bi bi-whatsapp"></i>
+      <i class="bi bi-pinterest"></i>
+    </div>
+    <div class="phone-number">
+      <p><i class="fas fa-phone-alt"></i> +91 720 815 1678</p>
+    </div>
+  </div>
+  
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Varun Electronics</a>
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Login here
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Login</a></li>
+              <li><a class="dropdown-item" href="#">Sign Up</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+      </div>
+    </div>
+  </nav>  
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1>Welcome to Varun Electronics</h1>
+    <p>Your one-stop shop for all electronic needs</p>
+    <div class="wrapper">
+        <div class="link_wrapper">
+            <a href="#" class="hoverm">Shop Now</a>
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+                    <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+      </div>
+  </div>
+<!-- Cards -->
+<div class="cards-container">
+  <div class="card">
+    <img class="card-img-top" src="lgtv.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">LG 139 cm Smart TV</h5>
+      <p class="card-text">LG 139 cm (55 inch) 4K UHD Smart TV 55UR8050</p>
+      <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img-top" src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTuJhux3stHRaSQmaFzBUpWkYQ3V1gggxVQsIJar9MM5xZzQC8HOckXB5AjiqfDeDznd8Sk--lGUmRBnBocDrmlXJb4dpcY2U5WjXHmu2ncaCaf86CIpmIEK7M&usqp=CAE" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">	
+        Apple AirPods (3rd Generation)</h5>
+      <p class="card-text">Designed by Apple, the AirPods 3rd Gen with Lightning Charging Case, an immersive, 3D listening experience.</p>
+      <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img-top" src="https://www.ohlocal.in/_next/image?url=https%3A%2F%2Fohlocal-media.s3.amazonaws.com%2Fmedia%2FScreenshot_2022-06-18_at_1.24.31_PM.png&w=750&q=75" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Voltas Fixed Speed Window AC</h5>
+      <p class="card-text">Voltas Fixed Speed Window AC, 1 Ton, 3 star- 123 LZF SKU - 4011414</p>
+      <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img-top" src="https://m.media-amazon.com/images/I/514YLZGCX0L._SX300_SY300_QL70_FMwebp_.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Wesley Xenon office Laptop Bag</h5>
+      <p class="card-text">Wesley Xenon office Laptop Bag (Compatible with 15.6inch laptops) briefcase notebook professional business messenger sling Water resistant Tablet Carrying Handbag</p>
+      <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+
+<div class="card">
+  <img class="card-img-top" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTozfIutRgmhRDAcHsaOfF66qCNAE847c9mJN6QM5NaZPaiTJYQ5VRZhiCNjeoKX7HGx3Ihe_krMejqVgMbNmYH0fUWXMDgdg&usqp=CAE" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">	
+      4K UHD Smart Android LED TV 55 Inch Curved (Black)</h5>
+    <p class="card-text"> LED TV 55 Inch Curved (Black) Item Weight 9.5 : Kg Operating System: Android Based Graphics Co processor: Dual Core 1.2 GHz Resolution: 1080p Included </p>
+    <a href="#" class="btn btn-primary">Buy Now</a>
+  </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img-top" src="https://cdn.shopify.com/s/files/1/1603/9553/files/Artboard_2_e58a4a6e-fe9e-4c18-8790-8c52103e8d79.jpg?v=1722936558" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Portronics Muff M3</h5>
+      <p class="card-text">Shop Portronics Muff M3- ANC Wireless Headphones with Mic</p>
+      <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+    </div>
+</div>
+
+</div>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-dark text-white pt-5">
+    <div class="container p-4">
+      <div class="row">
+        <!-- Company Name and Description -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+          <h5 class="text-uppercase fw-bold">
+            <i class="fa-solid fa-shop"></i> Varun Electronics
+          </h5>
+          <p>
+            Varun Electronics offers a wide range of high-quality electronic products tailored to meet all your needs.
+            Experience innovation and excellence with us.
+          </p>
+        </div>
+
+        <!-- Products -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mb-4">
+          <h5 class="text-uppercase fw-bold">Products</h5>
+          <p><a href="#!" class="text-reset">New Arrivals</a></p>
+          <p><a href="#!" class="text-reset">Air Conditioners</a></p>
+          <p><a href="#!" class="text-reset">Headphones</a></p>
+          <p><a href="#!" class="text-reset">Laptop Bags</a></p>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mb-4">
+          <h5 class="text-uppercase fw-bold">Useful Links</h5>
+          <p><a href="#!" class="text-reset">Pricing</a></p>
+          <p><a href="#!" class="text-reset">Settings</a></p>
+          <p><a href="#!" class="text-reset">Orders</a></p>
+          <p><a href="#!" class="text-reset">Help</a></p>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mb-md-0 mb-4">
+          <h5 class="text-uppercase fw-bold">Contact</h5>
+          <p><i class="fas fa-map-marker-alt me-2"></i>CodSoft, India</p>
+          <p><i class="fas fa-envelope me-2"></i>varun288@gmail.com</p>
+          <p><i class="fas fa-phone me-2"></i>+91 720 815 1678</p>
+          <p><i class="fas fa-print me-2"></i>+91 720 815 1679</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social Media -->
+    <div class="text-center p-3 border-top">
+      <section class="social-icons">
+        <a href="#!" class="text-white"><i class="fab fa-facebook-f"></i></a>
+        <a href="#!" class="text-white"><i class="fab fa-twitter"></i></a>
+        <a href="#!" class="text-white"><i class="fab fa-instagram"></i></a>
+        <a href="#!" class="text-white"><i class="fab fa-linkedin"></i></a>
+        <a href="#!" class="text-white"><i class="fab fa-whatsapp"></i></a>
+      </section>
+      <p class="mt-3">© 2024 Copyright: <a class="text-white fw-bold" href="#!">Varun Shah</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> -->
+</body>
+
+</html>
